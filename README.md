@@ -1,3 +1,6 @@
+![Screenshot 2025-03-22 075507](https://github.com/user-attachments/assets/9298b485-4511-454b-8c91-6dd4d0fc57d1)
+![Screenshot 2025-03-22 075458](https://github.com/user-attachments/assets/66377f92-4636-4c9a-94e8-3fe3f22e2583)
+![Screenshot 2025-03-22 075411](https://github.com/user-attachments/assets/ba9bcaf6-11fe-4873-89d7-b360b500fc36)
 AI-Powered Medical Assistant 🚀
 The AI-Powered Medical Assistant is a cutting-edge healthcare solution that transforms doctor-patient conversations into structured medical insights using AI. It integrates speech recognition, NLP, evidence synthesis, predictive modeling, and bias detection to generate personalized health recommendations in real-time.
 
