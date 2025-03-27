@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Medical Assistant</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1><i class="fas fa-heartbeat"></i> AI Medical Assistant</h1>
+            <p>Record patient conversations and generate comprehensive medical reports</p>
+        </header>
+
+        <div class="app-container">
+            <!-- Recording Section -->
+            <section class="recording-section">
+                <h2><i class="fas fa-microphone"></i> Patient Conversation</h2>
+                <div class="recording-controls">
+                    <button id="recordBtn" class="btn record-btn">
+                        <i class="fas fa-microphone"></i> Start Recording
+                    </button>
+                    <button id="stopBtn" class="btn stop-btn" disabled>
+                        <i class="fas fa-stop"></i> Stop Recording
+                    </button>
+                    <div class="recording-status">
+                        <span id="recordingIndicator" class="hidden">
+                            <i class="fas fa-circle recording-pulse"></i> Recording...
+                        </span>
+                    </div>
+                    <div class="timer">
+                        <span id="timerDisplay">00:00</span>
+                    </div>
+                </div>
+                <div class="audio-visualizer">
+                    <canvas id="visualizer"></canvas>
+                </div>
+            </section>
+
+            <!-- Transcription Section -->
+            <section class="transcription-section">
+                <h2><i class="fas fa-comment-medical"></i> Transcription</h2>
+                <div class="transcription-container">
+                    <textarea id="transcriptionText" readonly placeholder="Transcription will appear here..."></textarea>
+                    <button id="analyzeBtn" class="btn analyze-btn" disabled>
+                        <i class="fas fa-search"></i> Analyze Conversation
+                    </button>
+                </div>
+            </section>
+
+            <!-- Report Section -->
+            <section class="report-section">
+                <h2><i class="fas fa-file-medical"></i> Medical Report</h2>
+                <div class="report-tabs">
+                    <button class="tab-btn active" data-tab="entities">Medical Entities</button>
+                    <button class="tab-btn" data-tab="soap">SOAP Note</button>
+                    <button class="tab-btn" data-tab="evidence">Evidence</button>
+                    <button class="tab-btn" data-tab="full">Full Report</button>
+                </div>
+                <div class="tab-content active" id="entities-tab">
+                    <div class="report-content" id="entitiesContent"></div>
+                </div>
+                <div class="tab-content" id="soap-tab">
+                    <div class="report-content" id="soapContent"></div>
+                </div>
+                <div class="tab-content" id="evidence-tab">
+                    <div class="report-content" id="evidenceContent"></div>
+                </div>
+                <div class="tab-content" id="full-tab">
+                    <div class="report-content" id="fullReportContent"></div>
+                </div>
+                <div class="report-actions">
+                    <button id="downloadBtn" class="btn download-btn" disabled>
+                        <i class="fas fa-download"></i> Download Full Report
+                    </button>
+                </div>
+            </section>
+        </div>
+
+        <footer class="app-footer">
+            <p>AI Medical Assistant &copy; 2023 | For clinical use only</p>
+        </footer>
+    </div>
+
+    <script src="scripts/recorder.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
